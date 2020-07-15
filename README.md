@@ -4,7 +4,7 @@
 
 An application provides two asynchronous endpoints that shows and saves result of record-addition to database and file parallelly.
 
-File is temporarly stored in `%TEMP%`-path as `items.local` file, eg. `C:\Users\USER\AppData\Local\Temp`.
+File is temporarly stored in `%TEMP%`-path as `items.local` file, eg. `C:\Users\USER\AppData\Local\Temp\items.local`.
 
 Simplest _URL_ to insert/provide new record to `Items`-controller are accordingly `firstEndPoint/text` or `secondEndPoint/text`.  
 
