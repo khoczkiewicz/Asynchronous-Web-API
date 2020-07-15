@@ -9,12 +9,15 @@ namespace RaionApplication.Controllers
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
+    using RaionApplication.Extensions;
     using RaionApplication.Models;
 
     [Route("api/[controller]")]
     [ApiController]
     public class ItemsController : ControllerBase
     {
+        private static readonly string ItemsLocalPath = "items.local";
+
         private readonly RaionApplicationContext context;
 
         public ItemsController(RaionApplicationContext context)
@@ -101,6 +104,15 @@ namespace RaionApplication.Controllers
 
             this.context.Item.Add(item);
             await this.context.SaveChangesAsync();
+
+            try
+            {
+                Utils.ItemsUtil.TryToWriteLocalFile(item.Text, ItemsLocalPath);
+            }
+            catch (WritingToLocalFileException ex)
+            {
+                return this.BadRequest(ex.Message);
+            }
 
             return this.CreatedAtAction("GetItem", new { id = item.Id }, item);
         }
