@@ -29,6 +29,13 @@ namespace RaionApplication.Controllers
             return this.context.Item;
         }
 
+        [HttpGet("firstEndPoint/{text}")]
+        [HttpGet("secondEndPoint/{text}")]
+        public async Task<IActionResult> Get([FromRoute] string text)
+        {
+            return await this.PostItem(new Item() { Id = 0, Text = text });
+        }
+
         // GET: api/Items/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetItem([FromRoute] int id)
