@@ -1,5 +1,5 @@
-﻿// <copyright file="Program.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="Program.cs" company="RAION SOFTWARE Sp. z o.o.">
+// Copyright (c) RAION SOFTWARE Sp. z o.o.. All rights reserved.
 // </copyright>
 
 namespace RaionApplication

@@ -1,5 +1,5 @@
-﻿// <copyright file="ItemsController.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="ItemsController.cs" company="RAION SOFTWARE Sp. z o.o.">
+// Copyright (c) RAION SOFTWARE Sp. z o.o.. All rights reserved.
 // </copyright>
 
 namespace RaionApplication.Controllers
@@ -36,6 +36,7 @@ namespace RaionApplication.Controllers
         [HttpGet("secondEndPoint/{text}")]
         public async Task<IActionResult> Get([FromRoute] string text)
         {
+            // 0 is default; actual is provided by PostItem method
             return await this.PostItem(new Item() { Id = 0, Text = text });
         }
 

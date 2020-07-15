@@ -1,5 +1,5 @@
-﻿// <copyright file="GlobalSuppressions.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="GlobalSuppressions.cs" company="RAION SOFTWARE Sp. z o.o.">
+// Copyright (c) RAION SOFTWARE Sp. z o.o.. All rights reserved.
 // </copyright>
 
 // This file is used by Code Analysis to maintain SuppressMessage
